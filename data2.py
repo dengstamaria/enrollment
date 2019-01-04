@@ -9,6 +9,17 @@ data set notes:
 - Each region has a subtotal row added
 - National Grand total is the sum of all totals
 
+Cities were manually renamed from:
+Pangasinan I, Lingayen
+Pangasinan II, Binalonan
+City of Naga, Cebu
+
+to:
+Lingayen
+Binalonan
+City of Naga
+
+this is to avoid errors on concat for geo map
 """
 import pandas as pd
 
@@ -37,3 +48,5 @@ df_mod2 = pd.DataFrame(df_mod2)
 df_mod2.columns = ['Number']
 df_mod2.index.names = ['Region','Division','lat_lng','Year']
 df_mod2.to_csv('dataset.csv')
+
+
